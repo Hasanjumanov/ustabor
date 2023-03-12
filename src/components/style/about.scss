@@ -1,0 +1,260 @@
+@import '../../global.scss';
+
+.main{
+    width: 100%;
+    height: 100vh;
+    @include dfc(start,start);
+    padding: 100px 180px;
+    h1{
+        font-size: 40px;
+    }
+    .about{
+        width: 100%;
+        height: 50vh;
+        @include df(center,space-between);
+        margin-top: 40px;
+        .bir{
+            width: 264px;
+            height: 301px;
+            box-shadow: 0 4px 30px rgba(128, 128, 128, 0.37);
+            border-radius: 10px;
+            padding: 45px 30px;
+            @include dfc(start,start);
+            h1{
+                font-size: 22px;
+                font-weight: 450;
+                margin-top: 20px;
+            }
+            a{
+                margin-top: 10px;
+                text-decoration: none;
+                color: rgba(128, 128, 128, 0.572);
+                
+            }
+            i{
+                font-size: 30px;
+               
+            }
+            &:nth-of-type(1){
+                i{
+                    color: #63C74DFF;
+                }
+                a{
+                    border: 2px solid rgba(128, 128, 128, 0.262);
+                    border-radius: 15px;
+                    font-size: 13px;
+                    padding: 5px 5px;
+                    &:hover{
+                        border: 2px solid rgba(128, 128, 128, 0.761);
+                        color: #000;
+                    }
+                }
+            }
+            &:nth-of-type(2){
+                i{
+                    color: #FF5C5CFF;
+                }
+                a{
+                    border: 2px solid rgba(128, 128, 128, 0.262);
+                    border-radius: 15px;
+                    font-size: 13px;
+                    padding: 5px 5px;
+                    &:hover{
+                        border: 2px solid rgba(128, 128, 128, 0.761);
+                        color: #000;
+                    }
+                }
+            }
+            &:nth-of-type(3){
+                i{
+                    color: #54A3FFFF;
+                }
+                a{
+                    border: 2px solid rgba(128, 128, 128, 0.262);
+                    border-radius: 15px;
+                    font-size: 13px;
+                    padding: 5px 5px;
+                    &:hover{
+                        border: 2px solid rgba(128, 128, 128, 0.761);
+                        color: #000;
+                    }
+                }
+            }
+            &:nth-of-type(4){
+                i{
+                    color: #FF9F2FFF;
+                }
+                a{
+                    border: 2px solid rgba(128, 128, 128, 0.262);
+                    border-radius: 15px;
+                    font-size: 13px;
+                    padding: 5px 5px;
+                    &:hover{
+                        border: 2px solid rgba(76, 73, 73, 0.761);
+                        color: #000;
+                    }
+                }
+            }
+        }
+    }
+    .p{
+        font-size: 22px;
+        margin-top: 60px;
+        color: rgb(67, 64, 64);
+        p{
+            font-weight: 300;
+            text-align: center;
+        }
+    }
+    .btns{
+        width: 100%;
+        @include df(center,center);
+        margin-top: 50px;
+        button{
+            width: 220px;
+            height: 50px;
+            margin: 0 10px;
+            border: none;
+            background: $color2;
+            border-radius: 30px;
+            font-size: 17px;
+            color: $color;
+            letter-spacing: .3px;
+            &:nth-of-type(2){
+                background: none;
+                color: #000;
+                i{
+                    color: $color2;
+                    font-size: 18px;
+                    margin-left: 8px;
+                }
+                &:hover{
+                    color: rgba(67, 64, 64, 0.673);
+                    i{
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .main{
+        padding: 0 20px;
+        height: 80vh;
+        margin-top: 50px;
+        .about{
+            .bir{
+                width: 230px;
+                height: 250px;
+                box-shadow: 0 4px 30px rgba(128, 128, 128, 0.37);
+                border-radius: 10px;
+                @include dfc(center,center);
+                h1{
+                    font-size: 15px;
+                    font-weight: 450;
+                    margin-top: 20px;
+                    text-align: center;
+                }
+                a{
+                    margin-top: 10px;
+                    text-decoration: none;
+                    color: rgba(128, 128, 128, 0.572);
+                    text-align: center;
+                }
+                i{
+                    font-size: 30px;
+                    margin-right: 10px;
+                }
+            }
+            .p{
+                font-size: 25px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .main{
+        height: 120vh;
+        padding: 0 20px;
+        margin-top: 100px;
+        h1{
+            font-size: 30px;
+        }
+        .about{
+            .bir{
+                width: 170px;
+                height: 250px;
+                box-shadow: 0 4px 30px rgba(128, 128, 128, 0.37);
+                border-radius: 10px;
+                padding: 45px 30px;
+                @include dfc(center,center);
+                h1{
+                    font-size: 15px;
+                    font-weight: 450;
+                    margin-top: 20px;
+                    text-align: center;
+                }
+                a{
+                    margin-top: 10px;
+                    text-decoration: none;
+                    color: rgba(128, 128, 128, 0.572);
+                    text-align: center;
+                }
+                i{
+                    font-size: 30px;
+                    margin-right: 10px;
+                }
+            }
+            .p{
+                font-size: 25px;
+            }
+        }
+    }
+}
+@media screen and (max-width: 426px) {
+    .main{
+        width: 100%;
+        height: 255vh;
+        h1{
+            font-size: 30px;
+        }
+        .about{
+            width: 100%;
+            height: 175vh;
+            @include dfc(center,center);
+            
+            .bir{
+                width: 264px;
+                height: 301px;
+                box-shadow: 0 4px 30px rgba(128, 128, 128, 0.37);
+                border-radius: 10px;
+                padding: 45px 30px;
+                margin-top: 10px;
+                @include dfc(start,start);
+                h1{
+                    font-size: 22px;
+                    font-weight: 450;
+                    margin-top: 20px;
+                }
+                a{
+                    margin-top: 10px;
+                    text-decoration: none;
+                    color: rgba(128, 128, 128, 0.572);
+                    
+                }
+                i{
+                    font-size: 30px;
+                   
+                }
+                &:nth-of-type(2){
+                    h1{
+                        text-align: start;
+                    }
+                }
+            }
+        }
+    }
+}

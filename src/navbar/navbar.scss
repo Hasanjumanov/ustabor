@@ -1,0 +1,140 @@
+@import '../global.scss';
+
+nav{
+    width: 100%;
+    height: 130px;
+    @include df(center,space-between);
+    padding: 0 170px;
+    .logo{
+        img{
+            width: 200px;
+        }
+    }
+    .link{
+        width: 35%;
+        @include df(center,space-around);
+        a{
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 15px;
+            letter-spacing: 1px;
+            color: $color1;
+            margin-top: 5px;
+            &:nth-of-type(3){
+                width: 120px;
+                height: 35px;
+                @include df(center,center);
+                box-shadow: 0 4px 10px rgba(128, 128, 128, 0.37);
+                border-radius: 30px;
+                &:hover{
+                    box-shadow: 0 2px 7px rgba(128, 128, 128, 0.37);
+                }
+            }
+            &:hover{
+                color: $pcolor;
+            }
+            i{
+                width: 40px;
+                height: 40px;
+                background: $color2;
+                color: $color;
+                @include df(center,center);
+                border-radius: 30px;
+                font-size: 20px;
+            }
+        }
+    }
+    button {
+        width: 30px;
+        height: 30px;
+        background: none;
+        @include dfc(center, space-around);
+        cursor: pointer;
+        position: absolute;
+        top: -100px;
+        border: none;
+        span {  
+            width: 100%;
+            height: 4px;
+            background: $color1;
+            border-radius: 5px;
+        }
+    }
+
+    button.active {
+        span {
+            &:nth-of-type(1) {
+                transform: translateY(10px) rotateZ(45deg);
+            }
+
+            &:nth-of-type(2) {
+                transform: rotateZ(450deg);
+                opacity: 0;
+            }
+
+            &:nth-of-type(3) {
+                transform: translateY(-10px) rotateZ(-45deg);
+            }
+        }
+    }
+}
+
+nav.active{
+    background: #fff;
+    box-shadow: 0 8px 15px #05487524;
+}
+.menu-closer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 997;
+    height: 100vh;
+}
+@media screen and (max-width: 1024px){
+    nav{
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-closer.active{
+    width: 100%;
+    }
+    nav {
+        padding: 0 50px;
+        .link{
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            @include dfc(center, flex-start);
+            background: #fff;
+            box-shadow: 2px 0 15px #05487524;
+            z-index: 999;
+            padding: 100px 0;
+            a{
+                margin: 20px 0;
+                font-size: 20px;
+            }
+        }
+        .contacts{
+            margin-right: 50px;
+        }
+        .link.active {
+            right: 0;
+        }
+
+        button {
+            top: auto;
+            right: 2%;
+            z-index: 999;
+            
+        }
+    }
+}
+@media screen and (max-width: 426px) {
+    nav{
+        padding: 0 30px;
+    }
+}

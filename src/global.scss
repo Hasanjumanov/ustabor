@@ -1,0 +1,30 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css");
+  @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fredoka', sans-serif;
+    font-weight: 500;
+}
+body{
+    background: #FFFFFFFF;
+}
+
+@mixin df($a,$j) {
+    display: flex;
+    align-items: $a;
+    justify-content: $j;
+}
+@mixin dfc($a,$j) {
+    display: flex;
+    align-items: $a;
+    justify-content: $j;
+    flex-direction: column;
+}
+
+$color: #FFFFFFFF;
+$color1: #3C3C3BFF;
+$color2: #00AB2DFF;
+$pcolor: #808080FF;
+$bgcolor: #E0F6FFFF

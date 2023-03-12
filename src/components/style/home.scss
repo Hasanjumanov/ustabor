@@ -1,0 +1,213 @@
+@import '../../global.scss';
+
+.contioner{
+    width: 100%;
+    height: 80vh;
+    @include df(center,space-between);
+    padding: 0 180px;
+    .home{
+        width: 60%;
+        h1{
+            font-size: 60px;
+            margin-top: -50px;
+        }
+        p{
+            font-size: 30px;
+            color: $pcolor;
+            font-weight: 300;
+            margin-top: 30px;
+        }
+        .search{
+            width: 100%;
+            height: 80px;
+            @include df(center,space-between);
+            border: 2px solid $color2;
+            border-radius: 50px;
+            padding: 0 5px 0px 40px;
+            margin-top: 50px;
+            input{
+                width: 60%;
+                border: none;
+                outline: none;
+                font-size: 20px;
+                font-weight: 200;
+                &::placeholder{
+                    color:rgba(131, 127, 127, 0.404);
+                }
+            }
+            button{
+                width: 40%;
+                height: 65px;
+                border-radius: 30px;
+                border: none;
+                background: $color2;
+                color: $color;
+                font-size: 18px;
+            }
+        }
+    }
+    .image{
+        width: 36%;
+        height: 430px;
+        background: $bgcolor;
+        margin-top: -80px;
+        border-radius: 220px;
+        @include df(center,center);
+        
+        img{
+            width: 300px;
+            margin-top: -50px;
+
+        }
+    }
+}
+.static{
+    width: 100%;
+    height: 20vh;
+    @include df(center,space-between);
+    padding: 0 180px;
+    .bir{
+        @include df(flex-start,space-between);
+        .bir2{
+            margin-left: 40px;
+        }
+        i{
+            font-size: 35px;
+            color: $color2;
+            margin-top: 10px;
+        }
+        h1{
+            font-size: 45px;
+            color: $color2;
+        }
+        p{
+            font-size: 20px;
+            font-weight: 300;
+            margin-top: 20px;
+            color: $pcolor;
+        }
+    }
+}
+@media screen and (max-width: 1024px){
+    .contioner{
+        padding: 0 50px;
+        height: 60vh;
+    }
+    .static{
+        padding: 0 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contioner{
+        width: 100%;
+        height: 100vh;
+        padding: 0 50px;
+        margin-top: -50px;
+        .home{
+            width: 60%;
+            h1{
+                font-size: 50px;
+            }
+            p{
+                font-size: 25px;
+            }
+        }
+        .image{
+            width: 55%;
+            height: 55vh;
+            margin-left: 50px;
+            img{
+                width: 250px;
+                
+            }
+        }
+    }
+    .static{
+        padding: 0 50px;
+        .bir{
+            h1{
+                font-size: 40px;
+            }
+            i{
+                font-size: 35px;
+            }
+            &:nth-of-type(2){
+                margin-left: 30px;
+                .bir2{
+                    margin-top: -25px;
+                }
+                .bir1{
+                    margin-top: -25px;
+                }
+            }   
+        }
+        
+    }
+}
+@media screen and (max-width: 426px) {
+    .contioner{
+        height: 110vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+        padding: 0 20px;
+        .home{
+            width: 100%;
+            
+            h1{
+                font-size: 35px;
+                text-align: center;
+            }
+            p{
+                font-size: 20px;
+                text-align: center;
+            }
+            .search{
+                input{
+                    &::placeholder{
+                        margin-right: 20px;
+                    }
+                }
+                button{
+                    font-size: 15px;
+                    width: 150px;   
+                }
+            }
+        }
+       
+        .image{
+            width: 0;
+            img{
+                width: 200px;
+                margin-right: 50px;
+            }
+        }
+    }
+    .static{
+        width: 100%;
+        height: 50vh;
+        padding: 0 20px;
+        .bir{
+            padding: 30px 0;
+        }
+        
+        @include dfc(center,center)
+    }
+}
+@media screen and (max-width: 320px){
+    .static{
+        .bir{
+            h1{
+                font-size: 40px;
+            }
+            &:nth-of-type(2){
+                margin-right: 20px;
+                i{
+                    margin-left: -20px;
+                }
+            }
+        }
+    }
+}
